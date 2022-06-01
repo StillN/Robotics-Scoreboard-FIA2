@@ -5,7 +5,7 @@ from threading import Timer
 from PyQt6.QtWidgets import QApplication, QMainWindow
 from PyQt6 import QtGui, QtCore
 from PyQt6 import QtCore, QtGui, QtWidgets
-from Final_Scoreboard import Ui_MainWindow
+from UI import Ui_MainWindow
 from PyQt6.QtGui import QPixmap
 import sys
 from PyQt6.QtWidgets import *
@@ -29,7 +29,7 @@ class MainWindow:
         self.show()
 
     def show (self):
-        self.MainWindow.show()
+        self.Ui_MainWindow.show()
 
     
         self.display_gallows()
@@ -80,7 +80,7 @@ def display_gallows(self):
             team1_point = MainWindow.team_1_point
             team1_point -= 1
             MainWindow.team_1_point -= 1
-            print
+            
         
         # Team 2 Buttons   
         def point_btn_2(self):
