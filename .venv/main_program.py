@@ -1,16 +1,16 @@
 import time
+import sys
 from timeit import repeat
 from tkinter import Spinbox
 from threading import Timer
 from PyQt6.QtWidgets import QApplication, QMainWindow
 from PyQt6 import QtGui, QtCore
 from PyQt6 import QtCore, QtGui, QtWidgets
-from UI import Ui_MainWindow
+from Final_Scoreboard import Ui_MainWindow
 from PyQt6.QtGui import QPixmap
 import sys
 from PyQt6.QtWidgets import *
 from PyQt6.QtCore import *
-
 
 class MainWindow:
     team_1_point = 0
@@ -26,10 +26,10 @@ class MainWindow:
         self.ui.setupUi(self.main_win)
         
 
-        self.show()
 
     def show (self):
-        self.Ui_MainWindow.show()
+        self.Final_Scoreboard_MainWindow.show()
+       
 
     
         self.display_gallows()
@@ -101,9 +101,12 @@ def display_gallows(self):
 
 
 
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    main_win = MainWindow()
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = Qt.Widgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec())
 
